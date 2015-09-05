@@ -1,0 +1,159 @@
+/*===================================
+=            Reset block            =
+===================================*/
+@import "compass/reset";
+/*======================================
+=            Body CSS block            =
+======================================*/
+
+.body{
+	font-family: Roboto;
+}
+.wrap{
+	width:600px;
+	height:600px;
+	margin: 10% auto;
+	
+}
+.wrap-body {
+  background: #f5f5f5;
+  height: 100%;
+  width:100%;
+  position:absolute;
+}
+.wrap h1 {
+  color: rgba(0,0,0,1);
+  margin-left: 30%;
+  padding: 11px;
+  font-size: 1.8rem;
+  span{
+  	background:#FFFF00;
+  	padding:10px;
+  	font-family:Indie Flower;
+  }
+}
+
+/*=======================================
+=            Image CSS block            =
+=======================================*/
+
+.img-wrapper{
+	overflow:hidden;
+	position:relative;
+	width:200px;
+	height:200px;
+	margin: 5% auto;
+	border-radius:100px;
+	z-index:1;
+	img{
+		width:200px;
+		height:200px;
+		position:absolute;
+		border-radius:100px;
+		opacity:0;
+	}
+	.first-display{
+		opacity:1;
+	}
+	.animation-in{
+		animation: animation-in 3s ease-in 1;
+		animation-delay: 0.1s;
+	}
+	.animation-out{
+		animation: animation-out 3s ease-in 1;
+		
+	}
+	
+}
+
+/*======================================
+=            Text CSS block            =
+======================================*/
+.details{
+	width:59%;
+	margin:0 auto;
+	span{
+		float:left;
+		line-height:40px;
+		font-family: Roboto;
+		font-size:2rem;
+	}
+}
+.text-details{
+	width:200px;
+	height:22px;
+	padding:10px;
+	background:#FFFF00;
+	position:relative;
+	float:left;
+	overflow:hidden;
+	margin-left:20px;
+	span{
+		position:absolute;
+		opacity:0;
+		font-size:2rem;
+		font-family:Indie Flower;
+	}
+	.first-display{
+		opacity:1;
+	}
+	.animation-top-in{
+		animation: animation-top-in 3s ease-in 1;
+		animation-delay: 0.1s;
+	}
+	.animation-top-out{
+		animation: animation-top-out 3s ease-in 1;
+		
+	}
+}
+
+
+
+
+/*================================================
+=            Keyframe animation block            =
+================================================*/
+
+
+
+@keyframes animation-in{
+	0%{
+		opacity:1;
+		left:-100%
+	}
+	100%{
+		opacity:1;
+		left:0%
+	}
+};
+@keyframes animation-out{
+	0%{
+		opacity:1;
+		left:0%
+	}
+	100%{
+		opacity:1;
+		left:100%
+	}
+};
+
+@keyframes animation-top-in{
+	0%{
+		opacity:1;
+		top:-100%
+	}
+	100%{
+		opacity:1;
+		top:0%
+	}
+};
+@keyframes animation-top-out{
+	0%{
+		opacity:1;
+		top:0%
+	}
+	100%{
+		opacity:1;
+		top:100%
+	}
+};

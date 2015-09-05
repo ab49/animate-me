@@ -1,0 +1,205 @@
+/*===================================
+=            Reset block            =
+===================================*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/*======================================
+=            Body CSS block            =
+======================================*/
+.body {
+  font-family: Roboto;
+}
+
+.wrap {
+  width: 600px;
+  height: 600px;
+  margin: 10% auto;
+}
+
+.wrap-body {
+  background: #f5f5f5;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.wrap h1 {
+  color: black;
+  margin-left: 30%;
+  padding: 11px;
+  font-size: 1.8rem;
+}
+.wrap h1 span {
+  background: #FFFF00;
+  padding: 10px;
+  font-family: Indie Flower;
+}
+
+/*=======================================
+=            Image CSS block            =
+=======================================*/
+.img-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 5% auto;
+  border-radius: 100px;
+  z-index: 1;
+}
+.img-wrapper img {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  border-radius: 100px;
+  opacity: 0;
+}
+.img-wrapper .first-display {
+  opacity: 1;
+}
+.img-wrapper .animation-in {
+  animation: animation-in 3s ease-in 1;
+  animation-delay: 0.1s;
+}
+.img-wrapper .animation-out {
+  animation: animation-out 3s ease-in 1;
+}
+
+/*======================================
+=            Text CSS block            =
+======================================*/
+.details {
+  width: 59%;
+  margin: 0 auto;
+}
+.details span {
+  float: left;
+  line-height: 40px;
+  font-family: Roboto;
+  font-size: 2rem;
+}
+
+.text-details {
+  width: 200px;
+  height: 22px;
+  padding: 10px;
+  background: #FFFF00;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin-left: 20px;
+}
+.text-details span {
+  position: absolute;
+  opacity: 0;
+  font-size: 2rem;
+  font-family: Indie Flower;
+}
+.text-details .first-display {
+  opacity: 1;
+}
+.text-details .animation-top-in {
+  animation: animation-top-in 3s ease-in 1;
+  animation-delay: 0.1s;
+}
+.text-details .animation-top-out {
+  animation: animation-top-out 3s ease-in 1;
+}
+
+/*================================================
+=            Keyframe animation block            =
+================================================*/
+@keyframes animation-in {
+  0% {
+    opacity: 1;
+    left: -100%;
+  }
+  100% {
+    opacity: 1;
+    left: 0%;
+  }
+}
+@keyframes animation-out {
+  0% {
+    opacity: 1;
+    left: 0%;
+  }
+  100% {
+    opacity: 1;
+    left: 100%;
+  }
+}
+@keyframes animation-top-in {
+  0% {
+    opacity: 1;
+    top: -100%;
+  }
+  100% {
+    opacity: 1;
+    top: 0%;
+  }
+}
+@keyframes animation-top-out {
+  0% {
+    opacity: 1;
+    top: 0%;
+  }
+  100% {
+    opacity: 1;
+    top: 100%;
+  }
+}
